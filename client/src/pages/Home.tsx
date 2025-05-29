@@ -111,14 +111,14 @@ export default function HomePage() {
           backgroundPosition: "center"
         }}
       >
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6 fade-in">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6 fade-in text-white ">
             Secluded Self-Catering Retreat
           </h1>
-          <p className="text-xl md:text-2xl mb-4 fade-in font-light">
+          <p className="text-xl md:text-2xl mb-4 fade-in font-light text-white">
             On a Working Dairy Goat Farm & Wildlife Sanctuary
           </p>
-          <p className="text-lg md:text-xl mb-8 fade-in karoo-gold font-dancing">
+          <p className="text-lg md:text-xl mb-8 fade-in karoo-gold font-dancing text-white">
             Off-Grid Nature Escape near McGregor
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in">
