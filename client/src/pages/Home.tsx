@@ -131,7 +131,7 @@ export default function HomePage() {
             <Button 
               onClick={() => document.getElementById('accommodation')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-karoo-slate px-8 py-4 text-lg"
+              className="border-2 border-white text-grey hover:bg-white hover:text-karoo-slate px-8 py-4 text-lg"
             >
               Explore the Cottage
             </Button>
