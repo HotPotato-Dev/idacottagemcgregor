@@ -48,17 +48,17 @@ var insertUserSchema = createInsertSchema(users).pick({
 });
 
 // server/db.ts
-import { Pool, neonConfig } from "@neondatabase/serverless";
-import { drizzle } from "drizzle-orm/neon-serverless";
-import ws from "ws";
-neonConfig.webSocketConstructor = ws;
+import "dotenv/config";
+import postgres from "postgres";
+import { drizzle } from "drizzle-orm/postgres-js";
+process.env.DATABASE_URL = "postgresql://postgres:8WtRh4w7bVzLqOI4@db.bstmdavlwebmhvklavat.supabase.co:5432/postgres";
 if (!process.env.DATABASE_URL) {
   throw new Error(
     "DATABASE_URL must be set. Did you forget to provision a database?"
   );
 }
-var pool = new Pool({ connectionString: process.env.DATABASE_URL });
-var db = drizzle({ client: pool, schema: schema_exports });
+var client = postgres(process.env.DATABASE_URL, { ssl: "require" });
+var db = drizzle(client, { schema: schema_exports });
 
 // server/storage.ts
 import { eq, desc } from "drizzle-orm";
