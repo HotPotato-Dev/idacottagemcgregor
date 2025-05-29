@@ -1,0 +1,103 @@
+Generate a website for 'Ida Olive Shepherds Cottage,' a self-catering retreat on Giddy Goat Farm. The website should evoke a sense of peace, tranquility, and connection with nature, targeting nature lovers seeking an off-grid escape.
+
+Key Information to Incorporate:
+
+    Headline/Hero Section: Emphasize the unique selling points: "Secluded Self-Catering Retreat on a Working Dairy Goat Farm & Wildlife Sanctuary," "Off-Grid Nature Escape near McGregor," "Reconnect with Nature at Ida Olive Shepherds Cottage."
+
+    About the Cottage:
+
+        Location: Giddy Goat Farm, 6 km outside McGregor, surrounded by Robertson Succulent Karoo, near a shallow dam.
+
+        Design: Large glass sliding doors and windows to connect with nature, indigenous vegetation, and wildlife.
+
+        Accommodation: 2 bedrooms (main: king-size bed, second: queen-size bed).
+
+        Bathroom: Indoor and outdoor shower, bath, toilet, basin.
+
+        Amenities: Bedding, linen, towels, select toiletries provided.
+
+        Off-Grid Features: No electricity. Gas stove and refrigerator in the open-plan lounge/kitchen. Indoor fireplace. Lighting via solar lamps, candles, and fairy lights. Mini solar panel for USB fans and phone charger.
+
+        Connectivity: Limited mobile signal in certain spots.
+
+        Outdoor Cooking: Boma-style braai area and a gas braai on the verandah.
+
+    Experiences & Activities:
+
+        On-Site: Hiking trails, birdwatching, goat experiences with cheese tasting, stargazing, bush walks, walking tours.
+
+        Nearby: Mountain biking routes, fishing spots, wine-tasting venues, horse riding.
+
+        McGregor Village (few km away): Grocery stores, bottle store, fuel station, restaurants, theatre, tea gardens, pubs, craft shops.
+
+    Key Selling Points/Popular Features (to be highlighted, perhaps with icons):
+
+        Tea and Coffee provided
+
+        Free Secure Parking
+
+        Scenic View
+
+        Gravel Road access
+
+        Off-the-grid living
+
+    Facilities & Services (clearly listed):
+
+        Kitchen & Dining: Tea and Coffee.
+
+        Languages Spoken: Afrikaans, English.
+
+        Location & Views: Scenic View.
+
+        Parking & Access: Free Secure Parking, Gravel Road.
+
+        Reception Services: Electronic Bank Transfer, In-person Greeting.
+
+        Rules & Safety: Bring Your Own Drinking Water.
+
+        Services & Conveniences: Cleaning Service (By Arrangement).
+
+    Call to Actions (Strategic Placement):
+
+        "Book Your Escape"
+
+        "Enquire About Availability"
+
+        "Contact Us"
+
+    Website Structure & Design:
+
+        Homepage: Engaging overview, stunning imagery (suggest using imagery evocative of a Karoo farm, nature, goats, starry nights, cozy cottage interiors).
+
+        Accommodation Page: Detailed description of the cottage, rooms, amenities, with a photo gallery.
+
+        Activities Page: Information on on-site and nearby activities.
+
+        Gallery Page: High-quality images of the cottage, farm, landscape, and wildlife.
+
+        Contact/Booking Page: Dynamic contact/enquiry form (submissions emailed and stored in a database). Location map.
+
+        Blog/News (Optional but good for SEO): Posts about farm life, local attractions, seasonal highlights.
+
+    Essential Website Features (as specified):
+
+        Simplified Admin Portal: For easy content management by the owners.
+
+        Dynamic Contact/Enquiry Forms: Submissions emailed and stored in a database.
+
+        Legal Compliance: Privacy Policy, Cookie Policy, GDPR / POPI notification banner and management.
+
+    Overall Tone & Style:
+
+        Warm, welcoming, and inviting.
+
+        Emphasis on nature, peace, seclusion, and authentic farm experience.
+
+        Rustic yet comfortable and well-maintained.
+
+    Source of Truth/Inspiration:
+
+        Base content and style cues on the information provided and the existing page: https://www.lekkeslaap.co.za/accommodation/ida-olive-shepherds-cottage
+
+The website should make it easy for visitors to understand the unique offering, visualize their stay, and proceed with booking or making an enquiry. Ensure the design is mobile-responsive.

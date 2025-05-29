@@ -1,0 +1,41 @@
+[vite] connecting...
+[vite] connected.
+Warning: validateDOMNesting(...): <a> cannot appear as a descendant of &lt;a&gt;.
+    at a
+    at a
+    at https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=8d4b79ed:337:18
+    at li
+    at ul
+    at div
+    at div
+    at div
+    at div
+    at footer
+    at Footer
+    at div
+    at Router
+    at Provider (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-66S4TGQY.js?v=8d4b79ed:42:15)
+    at TooltipProvider (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=8d4b79ed:52:5)
+    at QueryClientProvider (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=8d4b79ed:2805:3)
+    at App (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/src/App.tsx?v=ei1ZzF_lBxSOdgdmPZyn6:99:3)
+at a
+at a
+at https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=8d4b79ed:337:18
+at li
+at ul
+at div
+at div
+at div
+at div
+at footer
+at Footer
+at div
+at Router
+at Provider (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-66S4TGQY.js?v=8d4b79ed:42:15)
+at TooltipProvider (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=8d4b79ed:52:5)
+at QueryClientProvider (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=8d4b79ed:2805:3)
+at App (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/src/App.tsx?v=ei1ZzF_lBxSOdgdmPZyn6:99:3)
+at t.value (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://8e942547-a978-4c7f-81c7-587987671ee1-00-2nhornv06figg.riker.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400

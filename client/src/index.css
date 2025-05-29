@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 184 12% 19%; /* #2F4F4F - karoo-slate */
+  --muted: 60 9% 98%; /* #F5F5DC - karoo-sand */
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 184 12% 19%;
+  --card: 0 0% 100%;
+  --card-foreground: 184 12% 19%;
+  --border: 60 9% 85%; /* Light karoo sand */
+  --input: 60 9% 85%;
+  --primary: 22 65% 32%; /* #8B4513 - karoo-brown */
+  --primary-foreground: 60 9% 98%;
+  --secondary: 28 75% 47%; /* #D2691E - karoo-chocolate */
+  --secondary-foreground: 60 9% 98%;
+  --accent: 120 61% 34%; /* #228B22 - karoo-green */
+  --accent-foreground: 60 9% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 22 65% 32%;
+  --radius: 0.5rem;
+  
+  /* Custom Karoo colors */
+  --karoo-brown: 22 65% 32%; /* #8B4513 */
+  --karoo-chocolate: 28 75% 47%; /* #D2691E */
+  --karoo-green: 120 61% 34%; /* #228B22 */
+  --karoo-sage: 76 60% 50%; /* #9ACD32 */
+  --karoo-gold: 51 100% 50%; /* #FFD700 */
+  --karoo-sunset: 9 100% 64%; /* #FF6347 */
+  --karoo-sand: 60 9% 98%; /* #F5F5DC */
+  --karoo-bush: 120 39% 69%; /* #8FBC8F */
+  --karoo-slate: 184 12% 19%; /* #2F4F4F */
+}
+
+.dark {
+  --background: 184 12% 19%;
+  --foreground: 60 9% 98%;
+  --muted: 184 8% 15%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 184 12% 19%;
+  --popover-foreground: 60 9% 98%;
+  --card: 184 12% 19%;
+  --card-foreground: 60 9% 98%;
+  --border: 184 8% 25%;
+  --input: 184 8% 25%;
+  --primary: 22 65% 32%;
+  --primary-foreground: 60 9% 98%;
+  --secondary: 28 75% 47%;
+  --secondary-foreground: 60 9% 98%;
+  --accent: 120 61% 34%;
+  --accent-foreground: 60 9% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 22 65% 40%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-source antialiased bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-source {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .karoo-brown {
+    color: hsl(var(--karoo-brown));
+  }
+  
+  .bg-karoo-brown {
+    background-color: hsl(var(--karoo-brown));
+  }
+  
+  .karoo-chocolate {
+    color: hsl(var(--karoo-chocolate));
+  }
+  
+  .bg-karoo-chocolate {
+    background-color: hsl(var(--karoo-chocolate));
+  }
+  
+  .karoo-green {
+    color: hsl(var(--karoo-green));
+  }
+  
+  .bg-karoo-green {
+    background-color: hsl(var(--karoo-green));
+  }
+  
+  .karoo-sage {
+    color: hsl(var(--karoo-sage));
+  }
+  
+  .bg-karoo-sage {
+    background-color: hsl(var(--karoo-sage));
+  }
+  
+  .karoo-gold {
+    color: hsl(var(--karoo-gold));
+  }
+  
+  .bg-karoo-gold {
+    background-color: hsl(var(--karoo-gold));
+  }
+  
+  .karoo-sunset {
+    color: hsl(var(--karoo-sunset));
+  }
+  
+  .bg-karoo-sunset {
+    background-color: hsl(var(--karoo-sunset));
+  }
+  
+  .karoo-sand {
+    color: hsl(var(--karoo-sand));
+  }
+  
+  .bg-karoo-sand {
+    background-color: hsl(var(--karoo-sand));
+  }
+  
+  .karoo-bush {
+    color: hsl(var(--karoo-bush));
+  }
+  
+  .bg-karoo-bush {
+    background-color: hsl(var(--karoo-bush));
+  }
+  
+  .karoo-slate {
+    color: hsl(var(--karoo-slate));
+  }
+  
+  .bg-karoo-slate {
+    background-color: hsl(var(--karoo-slate));
+  }
+
+  .hero-parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-shadow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .nav-shadow.scrolled {
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  }
+
+  .gallery-image {
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+}
