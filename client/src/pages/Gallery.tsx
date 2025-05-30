@@ -22,7 +22,7 @@ export default function Gallery() {
                 Gallery
               </h1>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Get a glimpse of your peaceful retreat and the stunning natural surroundings
+                Get a glimpse of your peaceful retreat and the stunning natural surroundingss
               </p>
             </div>
             
