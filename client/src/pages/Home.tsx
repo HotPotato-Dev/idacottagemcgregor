@@ -8,7 +8,7 @@ import { Calendar, Clock, MapPin, Phone, MessageCircle, Star, Wifi, Car, Coffee,
 import ContactForm from "@/components/ContactForm";
 import Lightbox from "@/components/Lightbox";
 import { galleryImages } from "@/lib/utils";
-import cottageImage from "@assets/2.jpg";
+import cottageImage from "@assets/1.jpg";
 
 export default function HomePage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -98,7 +98,7 @@ export default function HomePage() {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const whatsappNumber = "+27123456789"; // Replace with actual WhatsApp number
+  const whatsappNumber = "+27834594150"; // Replace with actual WhatsApp number
   const whatsappMessage = "Hi! I'm interested in booking a stay at Ida Olive Shepherds Cottage. Could you help me with availability and pricing?";
 
   return (
