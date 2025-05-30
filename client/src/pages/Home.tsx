@@ -179,7 +179,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="fade-in">
                 <img 
-                  src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                  src="@assets/2.jpg" 
                   alt="Rustic cottage interior with fireplace" 
                   className="rounded-2xl shadow-2xl w-full"
                 />
