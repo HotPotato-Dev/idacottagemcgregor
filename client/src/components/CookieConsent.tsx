@@ -34,7 +34,7 @@ export default function CookieConsent() {
         <div className="flex gap-2">
           <Button 
             onClick={acceptCookies}
-            className="bg-karoo-gold text-karoo-slate hover:bg-yellow-500"
+            className="bg-white text-gray-800 hover:text-black"
             size="sm"
           >
             Accept
@@ -42,7 +42,7 @@ export default function CookieConsent() {
           <Button 
             onClick={declineCookies}
             variant="outline"
-            className="border-white text-white hover:bg-white hover:text-karoo-brown"
+            className="bg-white text-gray-800 hover:text-black"
             size="sm"
           >
             Decline
