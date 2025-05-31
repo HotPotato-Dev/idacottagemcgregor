@@ -1,7 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import cottageImage from "@assets/Cottage 1.jpg";
-import Braai from "@assets/Braai area.jpg";
 import Bath from "@assets/Bath.jpg";
 import Bathroom1 from "@assets/Bathroom 1.jpg";
 import Bathroom from "@assets/Bathroom.jpg";
