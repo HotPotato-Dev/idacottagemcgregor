@@ -111,7 +111,7 @@ export default function HomePage() {
         style={{
           backgroundImage: `url(${cottageImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "top center"
         }}
       >
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto backdrop-blur-sm bg-black/30 rounded-xl p-8">
