@@ -108,12 +108,14 @@ export default function HomePage() {
     <div className="pt-16">
       {/* Hero Section */}
       <section id="hero" className="hero relative min-h-screen flex items-center justify-center hero-parallax bg-gradient-to-b from-black/40 to-black/40" 
-        style={{
-          backgroundImage: `url(${cottageImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "top center"
-        }}
+        
       >
+        {/* Background image */}
+          <img
+            src={cottageImage}
+            className="absolute inset-0 w-full h-full object-cover"
+            alt="Cottage"
+          />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto backdrop-blur-sm bg-black/30 rounded-xl p-8">
           <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6 fade-in text-white ">
             Secluded Self-Catering Retreat
