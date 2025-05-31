@@ -134,7 +134,7 @@ export default function HomePage() {
               Book Your Escape
             </Button>
             <Button 
-              onClick={() => document.getElementById('accommodation')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline" 
               className="border-2 border-white text-grey hover:bg-white hover:text-karoo-slate px-8 py-4 text-lg"
             >
