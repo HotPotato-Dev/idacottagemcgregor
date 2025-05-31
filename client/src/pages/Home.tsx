@@ -112,7 +112,7 @@ export default function HomePage() {
           backgroundPosition: "center"
         }}
       >
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto backdrop-blur-sm bg-black/30 rounded-xl p-8">
           <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6 fade-in text-white ">
             Secluded Self-Catering Retreat
           </h1>
