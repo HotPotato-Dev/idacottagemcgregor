@@ -10,6 +10,8 @@ import Lightbox from "@/components/Lightbox";
 import { galleryImages } from "@/lib/utils";
 import cottageImage from "@assets/Cottage 1.jpg";
 import Cottage3 from "@assets/Cottage 3.jpg";
+import BabyGoats from "@assets/BabyGoats.jpg";
+import Flowers from "@assets/Flowers.jpg";
 
 export default function HomePage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -69,13 +71,13 @@ export default function HomePage() {
       title: "Meet Our Goat Family: Stories from the Farm",
       excerpt: "Get to know our friendly dairy goats and learn about sustainable farming practices in the Karoo.",
       date: "December 10, 2023", 
-      image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+      image: BabyGoats
     },
     {
       title: "Seasonal Wildflowers: What to Expect Throughout the Year",
       excerpt: "A month-by-month guide to the spectacular wildflower displays in our corner of the Robertson Karoo.",
       date: "December 5, 2023",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+      image: Flowers
     }
   ];
 
@@ -199,11 +201,7 @@ export default function HomePage() {
                   <div className="flex items-center karoo-green">
                     <CheckCircle className="mr-2" size={20} />
                     <span className="font-medium">Working Dairy Goat Farm</span>
-                  </div>
-                  <div className="flex items-center karoo-green">
-                    <CheckCircle className="mr-2" size={20} />
-                    <span className="font-medium">Wildlife Sanctuary</span>
-                  </div>
+                  </div> 
                   <div className="flex items-center karoo-green">
                     <CheckCircle className="mr-2" size={20} />
                     <span className="font-medium">Indigenous Vegetation</span>
