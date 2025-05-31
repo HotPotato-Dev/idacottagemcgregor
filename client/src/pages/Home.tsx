@@ -181,7 +181,7 @@ export default function HomePage() {
               <div className="fade-in">
                 <img 
                   src = {Cottage3}
-                  alt ="Rustic cottage interior with fireplace" 
+                  alt ="Rustic cottage built within natural vegetation" 
                   className="rounded-2xl shadow-2xl w-full"
                 />
               </div>
