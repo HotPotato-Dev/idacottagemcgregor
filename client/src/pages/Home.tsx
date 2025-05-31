@@ -9,6 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import Lightbox from "@/components/Lightbox";
 import { galleryImages } from "@/lib/utils";
 import cottageImage from "@assets/Cottage 1.jpg";
+import Cottage3 from "@assets/Cottage 3.jpg";
 
 export default function HomePage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -179,7 +180,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="fade-in">
                 <img 
-                  src="@assets/Cottage 3.jpg" 
+                  src="@assets/Cottage3.jpg" 
                   alt="Rustic cottage interior with fireplace" 
                   className="rounded-2xl shadow-2xl w-full"
                 />
