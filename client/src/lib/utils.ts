@@ -1,7 +1,7 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import cottageImage from "@assets/1.jpg";
-import Braai from "@assets/2.jpg";
+import cottageImage from "@assets/Cottage 1.jpg";
+import Braai from "@assets/Braai area.jpg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
