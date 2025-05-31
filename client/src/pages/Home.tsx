@@ -8,7 +8,7 @@ import { Calendar, Clock, MapPin, Phone, MessageCircle, Star, Wifi, Car, Coffee,
 import ContactForm from "@/components/ContactForm";
 import Lightbox from "@/components/Lightbox";
 import { galleryImages } from "@/lib/utils";
-import cottageImage from "@assets/1.jpg";
+import cottageImage from "@assets/Cottage 1.jpg";
 
 export default function HomePage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
