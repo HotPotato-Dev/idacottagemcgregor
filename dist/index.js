@@ -51,10 +51,9 @@ var insertUserSchema = createInsertSchema(users).pick({
 import "dotenv/config";
 import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
-process.env.DATABASE_URL = "postgresql://postgres:8WtRh4w7bVzLqOI4@db.bstmdavlwebmhvklavat.supabase.co:5432/postgres";
 if (!process.env.DATABASE_URL) {
   throw new Error(
-    "DATABASE_URL must be set. Did you forget to provision a database?"
+    "DATABASE_URL must be set. Check your .env file or environment configuration."
   );
 }
 var client = postgres(process.env.DATABASE_URL, { ssl: "require" });
@@ -181,44 +180,10 @@ async function registerRoutes(app2) {
   return httpServer;
 }
 
-// server/vite.ts
 import express from "express";
-import fs from "fs";
-import path2 from "path";
-import { createServer as createViteServer, createLogger } from "vite";
-
-// vite.config.ts
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
-var vite_config_default = defineConfig({
-  plugins: [
-    react(),
-    runtimeErrorOverlay(),
-    ...process.env.NODE_ENV !== "production" && process.env.REPL_ID !== void 0 ? [
-      await import("@replit/vite-plugin-cartographer").then(
-        (m) => m.cartographer()
-      )
-    ] : []
-  ],
-  resolve: {
-    alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets")
-    }
-  },
-  root: path.resolve(import.meta.dirname, "client"),
-  build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
-    emptyOutDir: true
-  }
-});
+import fs from "fs";
 
-// server/vite.ts
-import { nanoid } from "nanoid";
-var viteLogger = createLogger();
 function log(message, source = "express") {
   const formattedTime = (/* @__PURE__ */ new Date()).toLocaleTimeString("en-US", {
     hour: "numeric",
@@ -228,58 +193,24 @@ function log(message, source = "express") {
   });
   console.log(`${formattedTime} [${source}] ${message}`);
 }
-async function setupVite(app2, server) {
-  const serverOptions = {
-    middlewareMode: true,
-    hmr: { server },
-    allowedHosts: true
-  };
-  const vite = await createViteServer({
-    ...vite_config_default,
-    configFile: false,
-    customLogger: {
-      ...viteLogger,
-      error: (msg, options) => {
-        viteLogger.error(msg, options);
-        process.exit(1);
-      }
-    },
-    server: serverOptions,
-    appType: "custom"
-  });
-  app2.use(vite.middlewares);
-  app2.use("*", async (req, res, next) => {
-    const url = req.originalUrl;
-    try {
-      const clientTemplate = path2.resolve(
-        import.meta.dirname,
-        "..",
-        "client",
-        "index.html"
-      );
-      let template = await fs.promises.readFile(clientTemplate, "utf-8");
-      template = template.replace(
-        `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`
-      );
-      const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
-    } catch (e) {
-      vite.ssrFixStacktrace(e);
-      next(e);
-    }
-  });
-}
 function serveStatic(app2) {
-  const distPath = path2.resolve(import.meta.dirname, "public");
+  const distPath = path.resolve(__dirname, "..", "public");
   if (!fs.existsSync(distPath)) {
+    log(`Static assets directory not found: ${distPath}. Ensure client is built.`, "error");
     throw new Error(
       `Could not find the build directory: ${distPath}, make sure to build the client first`
     );
   }
+  log(`Serving static files from ${distPath}`);
   app2.use(express.static(distPath));
   app2.use("*", (_req, res) => {
-    res.sendFile(path2.resolve(distPath, "index.html"));
+    const indexPath = path.resolve(distPath, "index.html");
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+    } else {
+      log(`index.html not found in ${distPath}`, "error");
+      res.status(404).send("Client application not found. Please build the client.");
+    }
   });
 }
 
@@ -317,19 +248,15 @@ app.use((req, res, next) => {
   app.use((err, _req, res, _next) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
+    log(`Error: ${status} - ${message}${err.stack ? ` - Stack: ${err.stack}` : ""}`, "error");
     res.status(status).json({ message });
-    throw err;
   });
-  if (app.get("env") === "development") {
-    await setupVite(app, server);
-  } else {
-    serveStatic(app);
-  }
-  const port = 5e3;
+  serveStatic(app);
+  const port = process.env.PORT || 5e3;
   server.listen({
-    port,
+    port: Number(port),
     host: "0.0.0.0",
-    reusePort: true
+    // reusePort: true, // Note: reusePort is not a standard Node.js http.Server option.
   }, () => {
     log(`serving on port ${port}`);
   });
